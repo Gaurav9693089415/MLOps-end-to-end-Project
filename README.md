@@ -285,7 +285,7 @@ Open:
 `build/html/index.html`
 
 ---
-
+---
 ##  Key Highlights
 
 ✔ Fully modular DVC pipeline
