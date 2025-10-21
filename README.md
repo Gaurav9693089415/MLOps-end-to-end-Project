@@ -288,14 +288,14 @@ Open:
 ---
 ##  Key Highlights
 
-✔ Fully modular DVC pipeline
-✔ MLflow + DAGsHub tracking
-✔ Automated model registry and promotion
-✔ Flask + Gunicorn deployment
-✔ Kubernetes orchestration
-✔ Prometheus monitoring
-✔ Auto-generated developer documentation
-✔ Production-grade structure with Makefile & CI-ready setup
+✔ Fully modular DVC pipeline  
+✔ MLflow + DAGsHub tracking  
+✔ Automated model registry and promotion  
+✔ Flask + Gunicorn deployment  
+✔ Kubernetes orchestration  
+✔ Prometheus monitoring  
+✔ Auto-generated developer documentation  
+✔ Production-grade structure with Makefile & CI-ready setup  
 
 ---
 
