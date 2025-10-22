@@ -1,17 +1,17 @@
 name: CI Pipeline
 
-on: [push]
+on: push
 
 jobs:
   project-testing:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - name: setup python
+        uses: actions/setup-python@v2
         with:
           python-version: '3.10'
 
@@ -23,15 +23,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install dependencies
+      - name: install dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install dvc[azure,s3,gdrive]  # install DVC for your storage backend
 
-      - name: Verify DVC pipeline
+      - name: run pipeline
         env:
           CAPSTONE_TEST: ${{ secrets.CAPSTONE_TEST }}
         run: |
-          dvc pull -q || echo "Skipping data pull (no remote set)"
-          dvc repro || echo "Pipeline repro step skipped (no data)"
+          dvc repro
