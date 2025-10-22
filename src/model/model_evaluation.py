@@ -9,8 +9,6 @@ import mlflow.sklearn
 import dagshub
 import os
 from src.logger import logging
-
-
 # Below code block is for production use
 # -------------------------------------------------------------------------------------
 # Set up DagsHub credentials for MLflow tracking
