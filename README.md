@@ -160,7 +160,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
 
 ### 🔹 ECR Image Repository
 
