@@ -1,288 +1,186 @@
 
 ---
 
-#  End-to-End MLOps Pipeline – Sentiment Analysis Project
+# End-to-End MLOps Pipeline – Sentiment Analysis Project
 
-This repository implements a **complete end-to-end MLOps workflow** for **sentiment classification** using a **Logistic Regression model**.
-It covers everything from **data ingestion → model training → evaluation → model registry → deployment → monitoring**, all integrated with **MLflow, DVC, Docker, Kubernetes, and Prometheus**.
+**Production-Ready Deployment on AWS EKS with Monitoring & Alerting**
 
----
-
-##  Project Overview
-
-This project demonstrates how to:
-
-* Version datasets and code using **DVC**
-* Track experiments using **MLflow**
-* Automatically register and promote models
-* Serve models in production using **Flask + Gunicorn**
-* Deploy on **Kubernetes**
-* Monitor model and API metrics using **Prometheus**
-* Generate developer documentation using **Sphinx**
+This project demonstrates a **complete MLOps lifecycle** — from data ingestion to model deployment and monitoring — built around a **Sentiment Analysis model**.
+It integrates **DVC**, **MLflow**, **Docker**, **AWS ECR/EKS**, **Prometheus**, **Grafana**, and **GitHub Actions**, creating a real-world **CI/CD-enabled MLOps system**.
 
 ---
 
-## ⚙️ Tech Stack
+## Project Overview
 
-| Category                | Tools / Frameworks                  |
-| ----------------------- | ----------------------------------- |
-| **Language**            | Python 3.11                         |
-| **Data Versioning**     | DVC                                 |
-| **Experiment Tracking** | MLflow + DAGsHub                    |
-| **Modeling**            | Scikit-learn, NLTK                  |
-| **Deployment**          | Flask, Gunicorn, Docker, Kubernetes |
-| **Monitoring**          | Prometheus                          |
-| **Documentation**       | Sphinx                              |
-| **Cloud**               | AWS S3, ECR                         |
-| **Code Quality**        | Flake8, Tox                         |
-| **Automation**          | Makefile, setup.py                  |
+This pipeline automates:
+
+* **Data → Model → Deployment → Monitoring**
+* Continuous integration (CI) with **GitHub Actions**
+* Continuous delivery (CD) to **AWS EKS**
+* Real-time monitoring via **Prometheus & Grafana**
+
+###  Key Goals
+
+ Reproducible ML workflow using **DVC & MLflow**
+ Model versioning and automatic promotion via **MLflow Registry**
+ Seamless containerization and deployment on **AWS EKS**
+ Scalable model monitoring with **Prometheus + Grafana Alerts**
 
 ---
 
-##  Project Structure
+##  Tech Stack
 
-```
-.
-├── .dvc/                       # DVC metadata
-├── .github/                    # CI/CD workflows (if configured)
-├── docs/                       # Sphinx documentation
-│   ├── commands.rst
-│   ├── conf.py
-│   ├── getting-started.rst
-│   ├── index.rst
-│   ├── Makefile
-│   └── make.bat
-│
-├── flask_app/                  # Model serving API
-│   ├── app.py
-│   ├── load_model_test.py
-│   ├── preprocessing_utility.py
-│   ├── requirements.txt
-│   └── templates/
-│       └── index.html
-│
-├── models/                     # Trained models and vectorizers
-│   └── vectorizer.pkl
-│
-├── notebooks/                  # Experiments & analysis
-│   ├── data.csv
-│   ├── IMDB.csv
-│   ├── exp1.ipynb
-│   ├── exp2_bow_vs_tfidf.py
-│   └── exp3_lor_bow_hp.py
-│
-├── references/                 # Reference documents / data schema
-│   └── .gitkeep
-│
-├── reports/                    # Reports and metrics
-│   ├── figures/
-│   └── experiment_info.json
-│
-├── scripts/                    # Automation scripts
-│   └── promote_model.py
-│
-├── src/                        # Core ML pipeline source code
-│   ├── connections/            # Database & S3 connectors
-│   │   ├── config.json
-│   │   ├── s3_connection.py
-│   │   └── ssms_connection.py
-│   │
-│   ├── data/                   # Data ingestion and preprocessing
-│   │   ├── data_ingestion.py
-│   │   └── data_preprocessing.py
-│   │
-│   ├── features/               # Feature engineering scripts
-│   │   └── feature_engineering.py
-│   │
-│   ├── logger/                 # Logging setup
-│   │   └── __init__.py
-│   │
-│   └── model/                  # Model building, evaluation, registry
-│       ├── model_building.py
-│       ├── model_evaluation.py
-│       ├── predict_model.py
-│       └── register_model.py
-│
-├── tests/                      # Unit / integration tests
-│   └── test_environment.py
-│
-├── .dvcignore
-├── .gitignore
-├── Dockerfile
-├── deployment.yaml             # Kubernetes Deployment + Service
-├── dvc.yaml                    # DVC pipeline definition
-├── dvc.lock
-├── LICENSE
-├── Makefile
-├── params.yaml                 # Pipeline parameters (test_size, etc.)
-├── projectflow.txt             # Visual project workflow
-├── README.md                   # 
-├── requirements.txt
-├── setup.py
-├── test_environment.py
-└── tox.ini
+| Category                  | Tools / Frameworks                     |
+| ------------------------- | -------------------------------------- |
+| **Language**              | Python 3.11                            |
+| **Modeling**              | Scikit-learn, NLTK                     |
+| **Experiment Tracking**   | MLflow + DagsHub                       |
+| **Data Versioning**       | DVC                                    |
+| **Deployment**            | Flask, Gunicorn, Docker, AWS ECR + EKS |
+| **CI/CD**                 | GitHub Actions                         |
+| **Monitoring & Alerting** | Prometheus, Grafana                    |
+| **Cloud Infra**           | AWS (ECR, EKS, IAM, CloudFormation)    |
+
+---
+
+##  Architecture Overview
+
+```text
+        ┌──────────────────────┐
+        │      Developer       │
+        │   (Push to GitHub)   │
+        └──────────┬───────────┘
+                   │
+                   ▼
+         ┌───────────────────┐
+         │ GitHub Actions CI │───► Runs DVC + MLflow + Tests
+         └──────────┬────────┘
+                    ▼
+         ┌───────────────────┐
+         │ Docker Build +    │
+         │ Push to AWS ECR   │
+         └──────────┬────────┘
+                    ▼
+         ┌───────────────────┐
+         │ Deploy on EKS     │
+         │ via kubectl apply │
+         └──────────┬────────┘
+                    ▼
+         ┌───────────────────┐
+         │ Prometheus &      │
+         │ Grafana Monitor   │
+         └───────────────────┘
 ```
 
 ---
 
-##  MLOps Pipeline Stages
+##  CI/CD Pipeline (GitHub Actions)
 
-### **1️⃣ Data Ingestion**
+Automated workflow from training to deployment:
 
-* Loads dataset from AWS S3 or CSV.
-* Splits into train/test (based on `params.yaml`).
-* Stores raw data under `data/raw/`.
+1. **Run DVC pipeline & unit tests**
+2. **Promote best model to MLflow Production**
+3. **Build & push Docker image to AWS ECR**
+4. **Update EKS cluster via kubectl**
 
-### **2️⃣ Data Preprocessing**
+```yaml
+on: push
+jobs:
+  project-testing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install & Test
+        run: |
+          pip install -r requirements.txt
+          dvc repro
+          python -m unittest tests/test_model.py
+      - name: Build & Push Docker
+        run: |
+          docker build -t capstone-proj .
+          docker push <ECR_REPO_URL>
+      - name: Deploy on EKS
+        run: kubectl apply -f deployment.yaml
+```
 
-* Cleans and normalizes text:
-
-  * Lowercasing
-  * Removing punctuation, numbers, URLs
-  * Stopword removal
-  * Lemmatization
-* Outputs processed data to `data/interim/`.
-
-### **3️⃣ Feature Engineering**
-
-* Converts text to numerical features using **CountVectorizer (Bag of Words)**.
-* Saves fitted vectorizer to `models/vectorizer.pkl`.
-* Stores processed features in `data/processed/`.
-
-### **4️⃣ Model Building**
-
-* Trains **Logistic Regression** on the processed dataset.
-* Saves trained model to `models/model.pkl`.
-
-### **5️⃣ Model Evaluation**
-
-* Evaluates metrics: Accuracy, Precision, Recall, AUC.
-* Logs metrics and parameters to **MLflow**.
-* Saves results in `reports/metrics.json` and `reports/experiment_info.json`.
-
-### **6️⃣ Model Registration & Promotion**
-
-* Registers model in **MLflow Model Registry** via `register_model.py`.
-* Promotes best-performing model to **Staging** or **Production** using `promote_model.py`.
-
-### **7️⃣ Deployment (Flask + Gunicorn + K8s)**
-
-* Flask app (`flask_app/app.py`) serves predictions.
-* Uses MLflow’s **production model** via registry URI.
-* Containerized using Docker → deployed on **Kubernetes** with LoadBalancer.
-
-### **8️⃣ Monitoring (Prometheus Integration)**
-
-* Tracks:
-
-  * Total requests (`app_request_count`)
-  * Latency (`app_request_latency_seconds`)
-  * Prediction count by class (`model_prediction_count`)
-* Metrics exposed at `/metrics`.
-
-### **9️⃣ Documentation (Sphinx)**
-
-* Developer documentation stored in `/docs`.
-* Build docs locally:
-
-  ```bash
-  sphinx-build -b html docs/ build/
-  ```
+ **Result:**
+On every Git push, your app gets retrained, tested, re-deployed, and monitored automatically.
 
 ---
 
-## ⚙️ Configuration Files
+##  Containerization
 
-| File              | Purpose                                    |
-| ----------------- | ------------------------------------------ |
-| `params.yaml`     | Hyperparameters & test split configuration |
-| `dvc.yaml`        | DVC pipeline stage definitions             |
-| `Dockerfile`      | Containerization for production            |
-| `deployment.yaml` | Kubernetes deployment config               |
-| `setup.py`        | Package configuration                      |
-| `.flake8`         | Code quality rules                         |
-| `tox.ini`         | Environment testing setup                  |
-| `Makefile`        | Simplified pipeline commands               |
-| `projectflow.txt` | Flow summary for visualization             |
+**Dockerfile Summary:**
+
+* Uses `python:3.11-slim`
+* Installs dependencies + NLTK data
+* Runs Flask API via **Gunicorn** for production
+
+```dockerfile
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "120", "app:app"]
+```
 
 ---
 
-##  MLflow + DAGsHub Setup
+##  Deployment on AWS EKS
 
-**Tracking URI:**
+**Deployment Highlights:**
 
-```
-https://dagshub.com/vikashdas770/YT-Capstone-Project.mlflow
-```
-
-**Environment Variable:**
-
-```bash
-export CAPSTONE_TEST=<your_dagshub_token>
-```
-
-**MLflow Registered Model:**
-
-* `my_model`
-* Automatically transitions from **Staging → Production** based on evaluation metrics.
-
----
-
-##  Deployment Workflow
-
-### Build Docker Image
-
-```bash
-docker build -t flask-app:latest .
-```
-
-### Run Locally
-
-```bash
-docker run -p 5000:5000 flask-app:latest
-```
-
-### Deploy to Kubernetes
+* 2 replicas for high availability
+* Resource limits ensure efficient scaling
+* Secure ECR pull via `imagePullSecrets`
+* Secrets managed with Kubernetes Secret
+* LoadBalancer exposes API externally on port `5000`
 
 ```bash
 kubectl apply -f deployment.yaml
-```
-
-### Access App
-
-```
-http://<external-ip>:5000
+kubectl get svc
 ```
 
 ---
 
-## 📈 Prometheus Metrics
+##  Monitoring & Alerting (Prometheus + Grafana)
 
-| Metric                        | Description                                 |
-| ----------------------------- | ------------------------------------------- |
-| `app_request_count`           | Number of API requests by method & endpoint |
-| `app_request_latency_seconds` | Request latency                             |
-| `model_prediction_count`      | Predictions per sentiment class             |
+**Custom Metrics exposed via Flask app:**
 
-Endpoint:
+| Metric                        | Description                     |
+| ----------------------------- | ------------------------------- |
+| `app_request_count`           | Number of API requests          |
+| `app_request_latency_seconds` | Request latency per endpoint    |
+| `model_prediction_count`      | Predictions per sentiment class |
+
+**Prometheus Scrapes Endpoint:**
 
 ```
 http://<pod-ip>:5000/metrics
 ```
 
+**Grafana Dashboards:**
+Visualize metrics like request load, latency, and model prediction frequency.
+
 ---
 
-##  Documentation
+## 🖼️ Screenshots
 
-Sphinx-based project documentation:
+### 🔹 ECR Image Repository
 
-```bash
-cd docs
-make html
-```
+Docker images stored securely in AWS ECR
+![ECR Screenshot](screenshots/ecr.png)
 
-Open:
-`build/html/index.html`
+### 🔹 EKS Deployment (kubectl output)
+
+Application successfully deployed on AWS EKS via LoadBalancer
+![EKS Deployment](screenshots/eks.png)
+
+### 🔹 Prometheus Metrics
+
+Live metrics being scraped from `/metrics` endpoint
+![Prometheus Screenshot](screenshots/prometheus.png)
+
+### 🔹 Grafana Dashboard
+
+Real-time visualization of API requests and model metrics
+![Grafana Screenshot](screenshots/grafana.png)
 
 ---
 ---
@@ -298,4 +196,3 @@ Open:
 ✔ Production-grade structure with Makefile & CI-ready setup  
 
 ---
-
