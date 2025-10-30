@@ -1,11 +1,7 @@
-Perfect, Gaurav 🔥 — below is your **final hybrid `README.md (v3)`**,
-combining the **Professional Portfolio version** with your **detailed technical breakdown** (cleanly structured with collapsible developer sections).
-
-It’s polished for **recruiters, interviewers, and engineers** — professional, visual, and complete.
 
 ---
 
-# 🚀 End-to-End MLOps Pipeline – Sentiment Analysis Project
+#  End-to-End MLOps Pipeline – Sentiment Analysis Project
 
 **Production-Ready Deployment on AWS EKS with Monitoring & Alerting**
 
@@ -14,7 +10,7 @@ It integrates **DVC**, **MLflow**, **Docker**, **AWS ECR/EKS**, **Prometheus**, 
 
 ---
 
-## 🧠 Project Overview
+##  Project Overview
 
 This pipeline automates:
 
@@ -23,7 +19,7 @@ This pipeline automates:
 * Continuous delivery (CD) to **AWS EKS**
 * Real-time monitoring via **Prometheus & Grafana**
 
-### 🎯 Key Goals
+###  Key Goals
 
 ✅ Reproducible ML workflow using **DVC & MLflow**
 ✅ Model versioning and automatic promotion via **MLflow Registry**
@@ -47,7 +43,7 @@ This pipeline automates:
 
 ---
 
-## 🧩 Architecture Overview
+##  Architecture Overview
 
 ```text
         ┌──────────────────────┐
@@ -107,12 +103,12 @@ jobs:
         run: kubectl apply -f deployment.yaml
 ```
 
-🟩 **Result:**
+ **Result:**
 On every Git push, your app gets retrained, tested, re-deployed, and monitored automatically.
 
 ---
 
-## 🐳 Containerization
+##  Containerization
 
 **Dockerfile Summary:**
 
@@ -126,7 +122,7 @@ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "120", "app:app"]
 
 ---
 
-## ☸️ Deployment on AWS EKS
+##  Deployment on AWS EKS
 
 **Deployment Highlights:**
 
@@ -143,7 +139,7 @@ kubectl get svc
 
 ---
 
-## 📡 Monitoring & Alerting (Prometheus + Grafana)
+##  Monitoring & Alerting (Prometheus + Grafana)
 
 **Custom Metrics exposed via Flask app:**
 
@@ -164,31 +160,31 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-## 🖼️ Screenshots
+##  Screenshots
 
-### 🔹 ECR Image Repository
+###  ECR Image Repository
 
 Docker images stored securely in AWS ECR
 ![ECR Screenshot](screenshots/ecr.png)
 
-### 🔹 EKS Deployment (kubectl output)
+###  EKS Deployment (kubectl output)
 
 Application successfully deployed on AWS EKS via LoadBalancer
 ![EKS Deployment](screenshots/eks.png)
 
-### 🔹 Prometheus Metrics
+###  Prometheus Metrics
 
 Live metrics being scraped from `/metrics` endpoint
 ![Prometheus Screenshot](screenshots/prometheus.png)
 
-### 🔹 Grafana Dashboard
+###  Grafana Dashboard
 
 Real-time visualization of API requests and model metrics
 ![Grafana Screenshot](screenshots/grafana.png)
 
 ---
 
-## 🧠 Key Highlights
+##  Key Highlights
 
 ✔️ End-to-End reproducible MLOps workflow
 ✔️ Automated CI/CD with GitHub Actions
@@ -199,29 +195,23 @@ Real-time visualization of API requests and model metrics
 
 ---
 
-## 💡 Future Improvements
 
-* Integrate **Alertmanager** for advanced alerting on model drift
-* Automate rollback for failed deployments
-* Extend monitoring with **Loki + Tempo** for logs and traces
-* Add **RAG-based Explainability Dashboard** for model insights
 
----
 
-## 👨‍💻 Author
+##  Author
 
 **Gaurav Kumar**
-AI & MLOps Engineer | GenAI, LLMs, Agentic AI
-[GitHub](https://github.com/Gaurav9693089415) • [LinkedIn](#)
+
+[GitHub](https://github.com/Gaurav9693089415) • 
 
 ---
 
-# 🧩 Developer Appendix (Advanced Details)
+#  Developer Appendix (Advanced Details)
 
 ---
 
 <details>
-<summary>📁 <b>Detailed Project Structure</b></summary>
+<summary> <b>Detailed Project Structure</b></summary>
 
 ```
 .
@@ -255,7 +245,7 @@ AI & MLOps Engineer | GenAI, LLMs, Agentic AI
 ---
 
 <details>
-<summary>📊 <b>Detailed MLOps Pipeline Stages</b></summary>
+<summary> <b>Detailed MLOps Pipeline Stages</b></summary>
 
 **1️⃣ Data Ingestion** → Load data from AWS S3 or local CSV.
 **2️⃣ Data Preprocessing** → Cleaning, normalization, lemmatization.
@@ -309,11 +299,3 @@ Automatically transitions from **Staging → Production** after evaluation.
 </details>
 
 ---
-
-✅ *This appendix keeps all deep technical references accessible but collapsible, so your README remains professional and clean on GitHub while still being fully detailed for engineers.*
-
----
-
-Would you like me to also generate a **simple architecture diagram image (PNG)** for this README (showing flow:
-`Code → DVC/MLflow → Docker/ECR → EKS → Prometheus/Grafana`)?
-It’ll make the README visually stronger for your GitHub portfolio.
