@@ -21,10 +21,10 @@ This pipeline automates:
   
 ###  Key Goals
 
- Reproducible ML workflow using **DVC & MLflow**
- Model versioning and automatic promotion via **MLflow Registry**
- Seamless containerization and deployment on **AWS EKS**
- Scalable model monitoring with **Prometheus + Grafana Alerts**
+ * Reproducible ML workflow using **DVC & MLflow**
+ * Model versioning and automatic promotion via **MLflow Registry**
+ * Seamless containerization and deployment on **AWS EKS**
+ * Scalable model monitoring with **Prometheus + Grafana Alerts**
 
 ---
 
