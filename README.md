@@ -295,6 +295,6 @@ export CAPSTONE_TEST=<your_dagshub_token>
 
 Registered Model: `my_model`
 Automatically transitions from **Staging → Production** after evaluation.
-
+<details>
 
 
