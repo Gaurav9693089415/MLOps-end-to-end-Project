@@ -195,7 +195,7 @@ Real-time visualization of API requests and model metrics
 ![Grafana Screenshot](screenshots/grafana.png)
 
 ---
-
+```
 ##  Key Highlights
 
 ✔️ End-to-End reproducible MLOps workflow
@@ -208,7 +208,7 @@ Real-time visualization of API requests and model metrics
 ---
 
 
-
+```
 ##  Author
 
 **Gaurav Kumar**
