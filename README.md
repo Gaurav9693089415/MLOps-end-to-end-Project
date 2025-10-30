@@ -164,23 +164,23 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ### 🔹 ECR Image Repository
 
-Docker images stored securely in AWS ECR
-![ECR Screenshot](screenshots/ecr.png)
+Docker images stored securely in AWS ECR  
+![ECR Screenshot](./screenshots/ecr.png)
 
 ### 🔹 EKS Deployment (kubectl output)
 
-Application successfully deployed on AWS EKS via LoadBalancer
-![EKS Deployment](screenshots/eks.png)
+Application successfully deployed on AWS EKS via LoadBalancer  
+![EKS Deployment](./screenshots/eks.png)
 
 ### 🔹 Prometheus Metrics
 
-Live metrics being scraped from `/metrics` endpoint
-![Prometheus Screenshot](screenshots/prometheus.png)
+Live metrics being scraped from `/metrics` endpoint  
+![Prometheus Screenshot](./screenshots/prometheus.png)
 
 ### 🔹 Grafana Dashboard
 
-Real-time visualization of API requests and model metrics
-![Grafana Screenshot](screenshots/grafana.png)
+Real-time visualization of API requests and model metrics  
+![Grafana Screenshot](./screenshots/grafana.png)
 
 ---
 ---
