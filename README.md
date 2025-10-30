@@ -160,8 +160,6 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-## 🖼️ Screenshots
-
 ## 🖼️ **Screenshots**
 
 ### 🔹 MLOps Project Architecture
@@ -212,7 +210,6 @@ Real-time visualization of API requests and model performance metrics integrated
   <em>📊 Grafana dashboard showing live API and model monitoring charts.</em>
 </div>
 
----
 
 ### 🔹 Grafana Dashboard
 Real-time visualization of API requests and model performance metrics integrated with Prometheus.  
