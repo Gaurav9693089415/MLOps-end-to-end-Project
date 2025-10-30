@@ -103,7 +103,7 @@ jobs:
         run: kubectl apply -f deployment.yaml
 ```
 
- **Result:** On every Git push, your app gets retrained, tested, re-deployed, and monitored automatically.
+ **Result:** On every Git push,  app gets retrained, tested, re-deployed, and monitored automatically.
 
 ---
 
