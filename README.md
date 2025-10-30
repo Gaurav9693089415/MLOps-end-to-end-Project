@@ -160,9 +160,11 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-## 🖼️ **Screenshots**
-
 ## 🖼️ Screenshots
+
+Below are snapshots demonstrating the full MLOps pipeline deployment, monitoring, and observability across AWS and open-source tools.
+
+---
 
 ### 🔹 MLOps Project Architecture
 Overall workflow showing data flow, CI/CD, model registry, deployment, and monitoring.  
