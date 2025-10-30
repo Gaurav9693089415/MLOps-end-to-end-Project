@@ -162,6 +162,8 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ## 🖼️ Screenshots
 
+## 🖼️ Screenshots
+
 Below are snapshots demonstrating the full MLOps pipeline deployment, monitoring, and observability across AWS and open-source tools.
 
 ---
@@ -195,6 +197,28 @@ Application successfully deployed on AWS EKS via LoadBalancer.
        alt="EKS Deployment" width="600"/>
   <br/>
   <em>🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.</em>
+</div>
+
+---
+
+### 🔹 Prometheus Metrics
+Live metrics being scraped from `/metrics` endpoint — tracking API latency, request count, and predictions.  
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/prometheus.png" 
+       alt="Prometheus Screenshot" width="600"/>
+  <br/>
+  <em>📈 Prometheus scraping real-time metrics from Flask app endpoint.</em>
+</div>
+
+---
+
+### 🔹 Grafana Dashboard
+Real-time visualization of API requests and model performance metrics integrated with Prometheus.  
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/grafana.png" 
+       alt="Grafana Dashboard" width="600"/>
+  <br/>
+  <em>📊 Grafana dashboard showing live API and model monitoring charts.</em>
 </div>
 
 ---
