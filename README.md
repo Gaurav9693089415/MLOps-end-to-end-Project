@@ -1,56 +1,53 @@
-Perfect ✅ — your README is already detailed and well-written, but the issue is purely **Markdown formatting and GitHub rendering**, not your content.
+Perfect, Gaurav 🔥 — below is your **final hybrid `README.md (v3)`**,
+combining the **Professional Portfolio version** with your **detailed technical breakdown** (cleanly structured with collapsible developer sections).
 
-Right now, your code uses “smart quotes,” missing fenced code blocks (` ``` `), and extra duplicates at the bottom.
-Let’s fix that properly so **all images display**, and **GitHub renders everything cleanly** (including your pipeline diagrams and image previews).
-
-Below is your **clean, fully fixed, and working version** — you can copy-paste this directly into your `README.md` file.
+It’s polished for **recruiters, interviewers, and engineers** — professional, visual, and complete.
 
 ---
 
-````markdown
-# End-to-End MLOps Pipeline – Sentiment Analysis Project
+# 🚀 End-to-End MLOps Pipeline – Sentiment Analysis Project
 
-*Production-Ready Deployment on AWS EKS with Monitoring & Alerting*
+**Production-Ready Deployment on AWS EKS with Monitoring & Alerting**
 
-This project demonstrates a *complete MLOps lifecycle* — from data ingestion to model deployment and monitoring — built around a *Sentiment Analysis model*.  
+This project demonstrates a **complete MLOps lifecycle** — from data ingestion to model deployment and monitoring — built around a **Sentiment Analysis model**.
 It integrates **DVC**, **MLflow**, **Docker**, **AWS ECR/EKS**, **Prometheus**, **Grafana**, and **GitHub Actions**, creating a real-world **CI/CD-enabled MLOps system**.
 
 ---
 
-## 🚀 Project Overview
+## 🧠 Project Overview
 
 This pipeline automates:
 
 * **Data → Model → Deployment → Monitoring**
-* Continuous integration (CI) with *GitHub Actions*
-* Continuous delivery (CD) to *AWS EKS*
-* Real-time monitoring via *Prometheus & Grafana*
+* Continuous integration (CI) with **GitHub Actions**
+* Continuous delivery (CD) to **AWS EKS**
+* Real-time monitoring via **Prometheus & Grafana**
 
 ### 🎯 Key Goals
 
-- Reproducible ML workflow using *DVC & MLflow*  
-- Model versioning and automatic promotion via *MLflow Registry*  
-- Seamless containerization and deployment on *AWS EKS*  
-- Scalable model monitoring with *Prometheus + Grafana Alerts*  
+✅ Reproducible ML workflow using **DVC & MLflow**
+✅ Model versioning and automatic promotion via **MLflow Registry**
+✅ Seamless containerization and deployment on **AWS EKS**
+✅ Scalable model monitoring with **Prometheus + Grafana Alerts**
 
 ---
 
 ## ⚙️ Tech Stack
 
-| Category | Tools / Frameworks |
-|-----------|--------------------|
-| **Language** | Python 3.11 |
-| **Modeling** | Scikit-learn, NLTK |
-| **Experiment Tracking** | MLflow + DagsHub |
-| **Data Versioning** | DVC |
-| **Deployment** | Flask, Gunicorn, Docker, AWS ECR + EKS |
-| **CI/CD** | GitHub Actions |
-| **Monitoring & Alerting** | Prometheus, Grafana |
-| **Cloud Infra** | AWS (ECR, EKS, IAM, CloudFormation) |
+| Category                  | Tools / Frameworks                     |
+| ------------------------- | -------------------------------------- |
+| **Language**              | Python 3.11                            |
+| **Modeling**              | Scikit-learn, NLTK                     |
+| **Experiment Tracking**   | MLflow + DagsHub                       |
+| **Data Versioning**       | DVC                                    |
+| **Deployment**            | Flask, Gunicorn, Docker, AWS ECR + EKS |
+| **CI/CD**                 | GitHub Actions                         |
+| **Monitoring & Alerting** | Prometheus, Grafana                    |
+| **Cloud Infra**           | AWS (ECR, EKS, IAM, CloudFormation)    |
 
 ---
 
-## 🧱 Architecture Overview
+## 🧩 Architecture Overview
 
 ```text
         ┌──────────────────────┐
@@ -77,11 +74,11 @@ This pipeline automates:
          │ Prometheus &      │
          │ Grafana Monitor   │
          └───────────────────┘
-````
+```
 
 ---
 
-## 🔁 CI/CD Pipeline (GitHub Actions)
+## ⚙️ CI/CD Pipeline (GitHub Actions)
 
 Automated workflow from training to deployment:
 
@@ -110,7 +107,7 @@ jobs:
         run: kubectl apply -f deployment.yaml
 ```
 
-**Result:**
+🟩 **Result:**
 On every Git push, your app gets retrained, tested, re-deployed, and monitored automatically.
 
 ---
@@ -121,7 +118,7 @@ On every Git push, your app gets retrained, tested, re-deployed, and monitored a
 
 * Uses `python:3.11-slim`
 * Installs dependencies + NLTK data
-* Runs Flask API via *Gunicorn* for production
+* Runs Flask API via **Gunicorn** for production
 
 ```dockerfile
 CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "120", "app:app"]
@@ -129,7 +126,7 @@ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "120", "app:app"]
 
 ---
 
-## ☁️ Deployment on AWS EKS
+## ☸️ Deployment on AWS EKS
 
 **Deployment Highlights:**
 
@@ -146,7 +143,7 @@ kubectl get svc
 
 ---
 
-## 📊 Monitoring & Alerting (Prometheus + Grafana)
+## 📡 Monitoring & Alerting (Prometheus + Grafana)
 
 **Custom Metrics exposed via Flask app:**
 
@@ -166,55 +163,157 @@ http://<pod-ip>:5000/metrics
 Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
+
 ## 🖼️ Screenshots
 
+### 🔹 ECR Image Repository
 
-### 📊 MLOps Project Architecture
-End-to-end MLOps architecture showing data flow from ingestion to monitoring.  
-![MLOps Architecture](screenshots/mlops_architecture.png)
+Docker images stored securely in AWS ECR
+![ECR Screenshot](screenshots/ecr.png)
 
----
+### 🔹 EKS Deployment (kubectl output)
 
-### 🐳 ECR Image Repository
-✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).  
-![ECR Screenshot](screenshots/ecr_repository.png)
+Application successfully deployed on AWS EKS via LoadBalancer
+![EKS Deployment](screenshots/eks.png)
 
----
+### 🔹 Prometheus Metrics
 
-### ☸️ EKS Deployment (kubectl output)
-🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.  
-![EKS Deployment](screenshots/eks_deployment.png)
+Live metrics being scraped from `/metrics` endpoint
+![Prometheus Screenshot](screenshots/prometheus.png)
 
----
+### 🔹 Grafana Dashboard
 
-### 📈 Prometheus Metrics
-Real-time system monitoring with Prometheus + Grafana dashboards.  
-![Prometheus Metrics](screenshots/prometheus_metrics.png)
+Real-time visualization of API requests and model metrics
+![Grafana Screenshot](screenshots/grafana.png)
 
 ---
 
-## 🔑 Key Highlights
+## 🧠 Key Highlights
 
-✔ Fully modular DVC pipeline
-✔ MLflow + DAGsHub tracking
-✔ Automated model registry and promotion
-✔ Flask + Gunicorn deployment
-✔ Kubernetes orchestration
-✔ Prometheus + Grafana monitoring
-✔ Auto-generated developer documentation
-✔ Production-grade structure with Makefile & CI-ready setup
-
-````
+✔️ End-to-End reproducible MLOps workflow
+✔️ Automated CI/CD with GitHub Actions
+✔️ Scalable deployment on AWS EKS
+✔️ Real-time monitoring with Prometheus + Grafana
+✔️ Secure model registry via MLflow + DagsHub
+✔️ Lightweight, modular, and production-grade architecture
 
 ---
 
-### ✅ Why this will now work:
-1. The issue was missing triple backticks (```) and inconsistent asterisks (`*`) around italic/bold text.  
-2. All images now use **GitHub’s raw URL paths**, which **always display** regardless of repo visibility.  
-3. Removed accidental duplicate Prometheus/Grafana sections that caused Markdown to misrender.  
-4. Proper fenced code blocks restore formatting for YAML, Dockerfile, Bash, and ASCII diagrams.  
+## 💡 Future Improvements
+
+* Integrate **Alertmanager** for advanced alerting on model drift
+* Automate rollback for failed deployments
+* Extend monitoring with **Loki + Tempo** for logs and traces
+* Add **RAG-based Explainability Dashboard** for model insights
 
 ---
 
-Would you like me to make one more version that’s **slightly compressed (500px width)** for a neater layout on GitHub (fits screen better)?
-````
+## 👨‍💻 Author
+
+**Gaurav Kumar**
+AI & MLOps Engineer | GenAI, LLMs, Agentic AI
+[GitHub](https://github.com/Gaurav9693089415) • [LinkedIn](#)
+
+---
+
+# 🧩 Developer Appendix (Advanced Details)
+
+---
+
+<details>
+<summary>📁 <b>Detailed Project Structure</b></summary>
+
+```
+.
+├── flask_app/
+│   ├── app.py
+│   ├── preprocessing_utility.py
+│   ├── templates/
+│   └── requirements.txt
+├── models/
+│   └── vectorizer.pkl
+├── notebooks/
+│   ├── IMDB.csv
+│   ├── exp1.ipynb
+│   └── exp2_bow_vs_tfidf.py
+├── src/
+│   ├── data/
+│   ├── features/
+│   ├── model/
+│   └── logger/
+├── scripts/
+│   └── promote_model.py
+├── deployment.yaml
+├── Dockerfile
+├── dvc.yaml
+├── params.yaml
+└── ci.yaml
+```
+
+</details>
+
+---
+
+<details>
+<summary>📊 <b>Detailed MLOps Pipeline Stages</b></summary>
+
+**1️⃣ Data Ingestion** → Load data from AWS S3 or local CSV.
+**2️⃣ Data Preprocessing** → Cleaning, normalization, lemmatization.
+**3️⃣ Feature Engineering** → TF-IDF/BoW vectorization.
+**4️⃣ Model Building** → Logistic Regression model training.
+**5️⃣ Model Evaluation** → Accuracy, Precision, Recall, AUC.
+**6️⃣ Model Registration** → MLflow model tracking + promotion.
+**7️⃣ Deployment** → Flask + Docker + EKS.
+**8️⃣ Monitoring** → Prometheus metrics, Grafana dashboards.
+**9️⃣ Documentation** → Sphinx docs under `/docs`.
+
+</details>
+
+---
+
+<details>
+<summary>⚙️ <b>Configuration & Setup Reference</b></summary>
+
+| File              | Purpose                                |
+| ----------------- | -------------------------------------- |
+| `params.yaml`     | Training hyperparameters               |
+| `dvc.yaml`        | DVC pipeline stage definitions         |
+| `Dockerfile`      | Containerization for production        |
+| `deployment.yaml` | Kubernetes deployment configuration    |
+| `ci.yaml`         | CI/CD workflow for GitHub Actions      |
+| `Makefile`        | Simplified pipeline execution commands |
+| `projectflow.txt` | Pipeline visualization                 |
+
+</details>
+
+---
+
+<details>
+<summary>🔗 <b>MLflow + DagsHub Setup</b></summary>
+
+**Tracking URI:**
+
+```
+https://dagshub.com/<username>/MLOps-end-to-end-Project.mlflow
+```
+
+**Environment Variable:**
+
+```bash
+export CAPSTONE_TEST=<your_dagshub_token>
+```
+
+Registered Model: `my_model`
+Automatically transitions from **Staging → Production** after evaluation.
+
+</details>
+
+---
+
+✅ *This appendix keeps all deep technical references accessible but collapsible, so your README remains professional and clean on GitHub while still being fully detailed for engineers.*
+
+---
+
+Would you like me to also generate a **simple architecture diagram image (PNG)** for this README (showing flow:
+`Code → DVC/MLflow → Docker/ECR → EKS → Prometheus/Grafana`)?
+It’ll make the README visually stronger for your GitHub portfolio.
