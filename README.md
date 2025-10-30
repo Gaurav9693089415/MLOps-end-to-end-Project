@@ -76,7 +76,9 @@ This pipeline automates:
 ### 🔹 MLOps Project Architecture
 Overall workflow showing data flow, CI/CD, model registry, deployment, and monitoring.
 
-![MLOps Architecture](screenshots/MLOps_Architecture.png)
+<p align="center">
+  <img src="screenshots/MLOps_Architecture.png" alt="MLOps Architecture" width="750"/>
+</p>
 
 *End-to-end MLOps architecture showing data flow from ingestion to monitoring.*
 
@@ -85,7 +87,9 @@ Overall workflow showing data flow, CI/CD, model registry, deployment, and monit
 ### 🔹 ECR Image Repository
 Docker images stored securely in AWS ECR.
 
-![ECR Screenshot](screenshots/ecr.png)
+<p align="center">
+  <img src="screenshots/ecr.png" alt="ECR Screenshot" width="700"/>
+</p>
 
 *✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).*
 
@@ -94,7 +98,9 @@ Docker images stored securely in AWS ECR.
 ### 🔹 EKS Deployment
 Application successfully deployed on AWS EKS via LoadBalancer.
 
-![EKS Deployment](screenshots/eks.png)
+<p align="center">
+  <img src="screenshots/eks.png" alt="EKS Deployment" width="700"/>
+</p>
 
 *🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.*
 
@@ -103,7 +109,9 @@ Application successfully deployed on AWS EKS via LoadBalancer.
 ### 🔹 Prometheus Metrics
 Live metrics being scraped from `/metrics` endpoint — tracking API latency, request count, and predictions.
 
-![Prometheus Screenshot](screenshots/prometheus.png)
+<p align="center">
+  <img src="screenshots/prometheus.png" alt="Prometheus Screenshot" width="700"/>
+</p>
 
 *📈 Prometheus scraping real-time metrics from Flask app endpoint.*
 
@@ -112,7 +120,9 @@ Live metrics being scraped from `/metrics` endpoint — tracking API latency, re
 ### 🔹 Grafana Dashboard
 Real-time visualization of API requests and model performance metrics integrated with Prometheus.
 
-![Grafana Dashboard](screenshots/grafana.png)
+<p align="center">
+  <img src="screenshots/grafana.png" alt="Grafana Dashboard" width="700"/>
+</p>
 
 *📊 Grafana dashboard showing live API and model monitoring charts.*
 
