@@ -18,7 +18,7 @@ This pipeline automates:
 * Continuous integration (CI) with **GitHub Actions**
 * Continuous delivery (CD) to **AWS EKS**
 * Real-time monitoring via **Prometheus & Grafana**
-
+---
 ###  Key Goals
 
 ✅ Reproducible ML workflow using **DVC & MLflow**
