@@ -160,27 +160,19 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-##  Screenshots
+## 🖼️ Screenshots & Verification
 
-### 🔹 ECR Image Repository
+All deployment proofs and monitoring visuals are available in the [`/screenshots`](./screenshots) folder.  
+This includes execution evidence for each core MLOps component:
 
-Docker images stored securely in AWS ECR  
-![ECR Screenshot](./screenshots/ecr.png)
+- **ECR Repository:** Successful image build and push to Amazon Elastic Container Registry.  
+- **EKS Deployment:** Flask-based API deployed on AWS EKS cluster with LoadBalancer service.  
+- **Prometheus Metrics:** Real-time scraping of API latency, request count, and prediction metrics.  
+- **Grafana Dashboard:** Live monitoring of model performance and infrastructure health.  
 
-### 🔹 EKS Deployment (kubectl output)
+Each screenshot demonstrates the successful execution of the respective tool within the production pipeline.  
+To verify, simply open or download the images from the [`screenshots`](./screenshots) directory.
 
-Application successfully deployed on AWS EKS via LoadBalancer  
-![EKS Deployment](./screenshots/eks.png)
-
-### 🔹 Prometheus Metrics
-
-Live metrics being scraped from `/metrics` endpoint  
-![Prometheus Screenshot](./screenshots/prometheus.png)
-
-### 🔹 Grafana Dashboard
-
-Real-time visualization of API requests and model metrics  
-![Grafana Screenshot](./screenshots/grafana.png)
 
 
 ---
