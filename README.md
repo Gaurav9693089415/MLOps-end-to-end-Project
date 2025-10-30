@@ -76,7 +76,7 @@ This pipeline automates:
 ### 🔹 MLOps Project Architecture
 Overall workflow showing data flow, CI/CD, model registry, deployment, and monitoring.
 
-![MLOps Architecture](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/MLOps_Architecture.png)
+![MLOps Architecture](screenshots/MLOps_Architecture.png)
 
 *End-to-end MLOps architecture showing data flow from ingestion to monitoring.*
 
@@ -85,7 +85,7 @@ Overall workflow showing data flow, CI/CD, model registry, deployment, and monit
 ### 🔹 ECR Image Repository
 Docker images stored securely in AWS ECR.
 
-![ECR Screenshot](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/ecr.png)
+![ECR Screenshot](screenshots/ecr.png)
 
 *✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).*
 
@@ -94,7 +94,7 @@ Docker images stored securely in AWS ECR.
 ### 🔹 EKS Deployment
 Application successfully deployed on AWS EKS via LoadBalancer.
 
-![EKS Deployment](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/eks.png)
+![EKS Deployment](screenshots/eks.png)
 
 *🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.*
 
@@ -103,7 +103,7 @@ Application successfully deployed on AWS EKS via LoadBalancer.
 ### 🔹 Prometheus Metrics
 Live metrics being scraped from `/metrics` endpoint — tracking API latency, request count, and predictions.
 
-![Prometheus Screenshot](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/prometheus.png)
+![Prometheus Screenshot](screenshots/prometheus.png)
 
 *📈 Prometheus scraping real-time metrics from Flask app endpoint.*
 
@@ -112,7 +112,7 @@ Live metrics being scraped from `/metrics` endpoint — tracking API latency, re
 ### 🔹 Grafana Dashboard
 Real-time visualization of API requests and model performance metrics integrated with Prometheus.
 
-![Grafana Dashboard](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/grafana.png)
+![Grafana Dashboard](screenshots/grafana.png)
 
 *📊 Grafana dashboard showing live API and model monitoring charts.*
 
