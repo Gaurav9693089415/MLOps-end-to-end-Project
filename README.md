@@ -176,19 +176,18 @@ To verify, simply open or download the images from the [`screenshots`](./screens
 
 
 ---
-
 ##  Key Highlights
 
-✔️ End-to-End reproducible MLOps workflow
-✔️ Automated CI/CD with GitHub Actions
-✔️ Scalable deployment on AWS EKS
-✔️ Real-time monitoring with Prometheus + Grafana
-✔️ Secure model registry via MLflow + DagsHub
-✔️ Lightweight, modular, and production-grade architecture
+✔ Fully modular DVC pipeline  
+✔ MLflow + DAGsHub tracking  
+✔ Automated model registry and promotion  
+✔ Flask + Gunicorn deployment  
+✔ Kubernetes orchestration  
+✔ Prometheus monitoring  
+✔ Auto-generated developer documentation  
+✔ Production-grade structure with Makefile & CI-ready setup  
 
 ---
-
-
 
 
 ##  Author
