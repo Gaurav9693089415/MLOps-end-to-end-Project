@@ -186,22 +186,13 @@ Real-time visualization of API requests and model metrics
 ---
 ##  Key Highlights
 
-✔️ End-to-End reproducible MLOps workflow
-✔️ Automated CI/CD with GitHub Actions
-✔️ Scalable deployment on AWS EKS
-✔️ Real-time monitoring with Prometheus + Grafana
-✔️ Secure model registry via MLflow + DagsHub
-✔️ Lightweight, modular, and production-grade architecture
-
-
-
-
----
-
-## 👨‍💻 Author
-
-**Gaurav Kumar**
-
-[GitHub](https://github.com/Gaurav9693089415) 
+✔ Fully modular DVC pipeline  
+✔ MLflow + DAGsHub tracking  
+✔ Automated model registry and promotion  
+✔ Flask + Gunicorn deployment  
+✔ Kubernetes orchestration  
+✔ Prometheus monitoring  
+✔ Auto-generated developer documentation  
+✔ Production-grade structure with Makefile & CI-ready setup  
 
 ---
