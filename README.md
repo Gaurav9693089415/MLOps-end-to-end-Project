@@ -162,12 +162,12 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ## 🖼️ **Screenshots**
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/MLOps_Architecture.png" 
-       alt="MLOps Architecture" width="750"/>
-  <br/>
-  <em>End-to-end MLOps architecture showing data flow from ingestion to monitoring.</em>
-</div>
+### 🔹 MLOps Project Architecture
+Overall workflow showing data flow, CI/CD, model registry, deployment, and monitoring.  
+
+![MLOps Architecture](https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/MLOps_Architecture.png)
+
+*End-to-end MLOps architecture showing data flow from ingestion to monitoring.*
 
 ---
 
