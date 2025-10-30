@@ -166,71 +166,30 @@ http://<pod-ip>:5000/metrics
 Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
-
 ## 🖼️ Screenshots
 
-### 🔹 MLOps Project Architecture
 
-Overall workflow showing data flow, CI/CD, model registry, deployment, and monitoring.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/MLOps_Architecture.png" 
-       alt="MLOps Architecture" width="750"/>
-  <br/>
-  <em>End-to-end MLOps architecture showing data flow from ingestion to monitoring.</em>
-</div>
+### 📊 MLOps Project Architecture
+End-to-end MLOps architecture showing data flow from ingestion to monitoring.  
+![MLOps Architecture](screenshots/mlops_architecture.png)
 
 ---
 
-### 🔹 ECR Image Repository
-
-Docker images stored securely in AWS ECR.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/ecr.png" 
-       alt="ECR Screenshot" width="600"/>
-  <br/>
-  <em>✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).</em>
-</div>
+### 🐳 ECR Image Repository
+✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).  
+![ECR Screenshot](screenshots/ecr_repository.png)
 
 ---
 
-### 🔹 EKS Deployment (kubectl output)
-
-Application successfully deployed on AWS EKS via LoadBalancer.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/eks.png" 
-       alt="EKS Deployment" width="600"/>
-  <br/>
-  <em>🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.</em>
-</div>
+### ☸️ EKS Deployment (kubectl output)
+🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.  
+![EKS Deployment](screenshots/eks_deployment.png)
 
 ---
 
-### 🔹 Prometheus Metrics
-
-Live metrics being scraped from `/metrics` endpoint — tracking API latency, request count, and predictions.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/prometheus.png" 
-       alt="Prometheus Screenshot" width="600"/>
-  <br/>
-  <em>📈 Prometheus scraping real-time metrics from Flask app endpoint.</em>
-</div>
-
----
-
-### 🔹 Grafana Dashboard
-
-Real-time visualization of API requests and model performance metrics integrated with Prometheus.
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/grafana.png" 
-       alt="Grafana Dashboard" width="600"/>
-  <br/>
-  <em>📊 Grafana dashboard showing live API and model monitoring charts.</em>
-</div>
+### 📈 Prometheus Metrics
+Real-time system monitoring with Prometheus + Grafana dashboards.  
+![Prometheus Metrics](screenshots/prometheus_metrics.png)
 
 ---
 
