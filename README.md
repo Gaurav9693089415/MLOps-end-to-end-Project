@@ -217,8 +217,6 @@ Real-time visualization of API requests and model performance metrics integrated
   <em>📊 Grafana dashboard showing live API and model monitoring charts.</em>
 </div>
 
-
----
 ---
 ##  Key Highlights
 
