@@ -212,7 +212,7 @@ Real-time visualization of API requests and model metrics
 ##  Author
 
 **Gaurav Kumar**
-AI & MLOps Engineer | GenAI, LLMs, Agentic AI
+
 [GitHub](https://github.com/Gaurav9693089415) 
 
 ---
