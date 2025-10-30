@@ -1,4 +1,6 @@
-Here’s your **clean, correctly formatted, and ready-to-copy** version of the markdown for your **End-to-End MLOps Pipeline – Sentiment Analysis Project** 👇
+Absolutely 👍 Here’s the **complete, updated, and ready-to-copy README** — with all **screenshot links changed to local relative paths** (so you’ll never hit the “429: Too Many Requests” error again).
+
+Make sure all your screenshots (like `MLOps_Architecture.png`, `ecr.png`, etc.) are inside a folder named `screenshots/` in your project root.
 
 ---
 
@@ -169,8 +171,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 ### 🔹 MLOps Project Architecture
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/MLOps_Architecture.png" 
-       alt="MLOps Architecture" width="750"/>
+  <img src="screenshots/MLOps_Architecture.png" alt="MLOps Architecture" width="750"/>
   <br/>
   <em>End-to-end MLOps architecture showing data flow from ingestion to monitoring.</em>
 </div>
@@ -180,8 +181,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 ### 🔹 ECR Image Repository
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/ecr.png" 
-       alt="ECR Screenshot" width="600"/>
+  <img src="screenshots/ecr.png" alt="ECR Screenshot" width="600"/>
   <br/>
   <em>✅ Container image successfully pushed to Amazon Elastic Container Registry (ECR).</em>
 </div>
@@ -191,8 +191,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 ### 🔹 EKS Deployment (kubectl output)
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/eks.png" 
-       alt="EKS Deployment" width="600"/>
+  <img src="screenshots/eks.png" alt="EKS Deployment" width="600"/>
   <br/>
   <em>🚀 Flask app deployed on AWS EKS cluster using LoadBalancer service.</em>
 </div>
@@ -202,8 +201,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 ### 🔹 Prometheus Metrics
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/prometheus.png" 
-       alt="Prometheus Screenshot" width="600"/>
+  <img src="screenshots/prometheus.png" alt="Prometheus Screenshot" width="600"/>
   <br/>
   <em>📈 Prometheus scraping real-time metrics from Flask app endpoint.</em>
 </div>
@@ -213,8 +211,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 ### 🔹 Grafana Dashboard
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Gaurav9693089415/MLOps-end-to-end-Project/main/screenshots/grafana.png" 
-       alt="Grafana Dashboard" width="600"/>
+  <img src="screenshots/grafana.png" alt="Grafana Dashboard" width="600"/>
   <br/>
   <em>📊 Grafana dashboard showing live API and model monitoring charts.</em>
 </div>
@@ -238,6 +235,14 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-Would you like me to make a **GitHub README version** of this (with badges, navigation links, and a more visual intro section)?  
-It would look more professional for your repo’s landing page.
+✅ **How to use it:**
+1. Put this markdown in your `README.md` file.  
+2. Create a folder `screenshots/` inside your project root.  
+3. Move all image files (like `MLOps_Architecture.png`, `ecr.png`, etc.) into that folder.  
+4. Commit and push — your README will now render images **without any 429 errors**.  
+
+---
+
+Would you like me to make a **“GitHub-optimized” version** (with badges, quick links, and a professional top section like a portfolio README)?  
+It looks great for recruiters and portfolio viewers.
 ```
