@@ -10,7 +10,7 @@ It integrates **DVC**, **MLflow**, **Docker**, **AWS ECR/EKS**, **Prometheus**, 
 
 ---
 
-## 🧠Project Overview
+## Project Overview
 
 This pipeline automates:
 
