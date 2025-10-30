@@ -195,7 +195,7 @@ Real-time visualization of API requests and model metrics
 ![Grafana Screenshot](screenshots/grafana.png)
 
 ---
-```
+
 ##  Key Highlights
 
 ✔️ End-to-End reproducible MLOps workflow
@@ -205,10 +205,10 @@ Real-time visualization of API requests and model metrics
 ✔️ Secure model registry via MLflow + DagsHub
 ✔️ Lightweight, modular, and production-grade architecture
 
+
+
+
 ---
-
-
-```
 ##  Author
 
 **Gaurav Kumar**
