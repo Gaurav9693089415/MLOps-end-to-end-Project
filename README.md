@@ -10,7 +10,7 @@ It integrates **DVC**, **MLflow**, **Docker**, **AWS ECR/EKS**, **Prometheus**, 
 
 ---
 
-## Project Overview
+## 🧠Project Overview
 
 This pipeline automates:
 
@@ -28,7 +28,7 @@ This pipeline automates:
 
 ---
 
-## ⚙️ Tech Stack
+##  Tech Stack
 
 | Category                  | Tools / Frameworks                     |
 | ------------------------- | -------------------------------------- |
@@ -103,7 +103,8 @@ jobs:
         run: kubectl apply -f deployment.yaml
 ```
 
- **Result:** On every Git push,  app gets retrained, tested, re-deployed, and monitored automatically.
+ **Result:**
+On every Git push, your app gets retrained, tested, re-deployed, and monitored automatically.
 
 ---
 
@@ -125,24 +126,11 @@ CMD ["gunicorn", "--bind", "0.0.0.0:5000", "--timeout", "120", "app:app"]
 
 **Deployment Highlights:**
 
-* `flask-app` with 2 replicas for high availability
+* 2 replicas for high availability
 * Resource limits ensure efficient scaling
-* Secrets managed securely via `capstone-secret`
-* Exposed using a **LoadBalancer Service (port 5000)**
-
-```yaml
-apiVersion: v1
-kind: Service
-metadata:
-  name: flask-app-service
-spec:
-  type: LoadBalancer
-  ports:
-    - port: 5000
-      targetPort: 5000
-```
-
- Deployed using:
+* Secure ECR pull via `imagePullSecrets`
+* Secrets managed with Kubernetes Secret
+* LoadBalancer exposes API externally on port `5000`
 
 ```bash
 kubectl apply -f deployment.yaml
@@ -172,7 +160,7 @@ Visualize metrics like request load, latency, and model prediction frequency.
 
 ---
 
-##  Screenshots
+## 🖼️ Screenshots
 
 ### 🔹 ECR Image Repository
 
@@ -195,7 +183,7 @@ Real-time visualization of API requests and model metrics
 ![Grafana Screenshot](screenshots/grafana.png)
 
 ---
-
+---
 ##  Key Highlights
 
 ✔️ End-to-End reproducible MLOps workflow
@@ -209,10 +197,104 @@ Real-time visualization of API requests and model metrics
 
 
 ---
-##  Author
+
+## 👨‍💻 Author
 
 **Gaurav Kumar**
 
 [GitHub](https://github.com/Gaurav9693089415) 
 
 ---
+
+#  Developer Appendix (Advanced Details)
+
+---
+
+<details>
+<summary>📁 <b>Detailed Project Structure</b></summary>
+
+```
+.
+├── flask_app/
+│   ├── app.py
+│   ├── preprocessing_utility.py
+│   ├── templates/
+│   └── requirements.txt
+├── models/
+│   └── vectorizer.pkl
+├── notebooks/
+│   ├── IMDB.csv
+│   ├── exp1.ipynb
+│   └── exp2_bow_vs_tfidf.py
+├── src/
+│   ├── data/
+│   ├── features/
+│   ├── model/
+│   └── logger/
+├── scripts/
+│   └── promote_model.py
+├── deployment.yaml
+├── Dockerfile
+├── dvc.yaml
+├── params.yaml
+└── ci.yaml
+```
+
+</details>
+
+---
+
+<details>
+<summary> <b>Detailed MLOps Pipeline Stages</b></summary>
+
+**1️⃣ Data Ingestion** → Load data from AWS S3 or local CSV.
+**2️⃣ Data Preprocessing** → Cleaning, normalization, lemmatization.
+**3️⃣ Feature Engineering** → TF-IDF/BoW vectorization.
+**4️⃣ Model Building** → Logistic Regression model training.
+**5️⃣ Model Evaluation** → Accuracy, Precision, Recall, AUC.
+**6️⃣ Model Registration** → MLflow model tracking + promotion.
+**7️⃣ Deployment** → Flask + Docker + EKS.
+**8️⃣ Monitoring** → Prometheus metrics, Grafana dashboards.
+**9️⃣ Documentation** → Sphinx docs under `/docs`.
+
+</details>
+
+---
+
+<details>
+<summary> <b>Configuration & Setup Reference</b></summary>
+
+| File              | Purpose                                |
+| ----------------- | -------------------------------------- |
+| `params.yaml`     | Training hyperparameters               |
+| `dvc.yaml`        | DVC pipeline stage definitions         |
+| `Dockerfile`      | Containerization for production        |
+| `deployment.yaml` | Kubernetes deployment configuration    |
+| `ci.yaml`         | CI/CD workflow for GitHub Actions      |
+| `Makefile`        | Simplified pipeline execution commands |
+| `projectflow.txt` | Pipeline visualization                 |
+
+</details>
+
+---
+
+<details>
+<summary> <b>MLflow + DagsHub Setup</b></summary>
+
+**Tracking URI:**
+
+```
+https://dagshub.com/<username>/MLOps-end-to-end-Project.mlflow
+```
+
+**Environment Variable:**
+
+```bash
+export CAPSTONE_TEST=<your_dagshub_token>
+```
+
+Registered Model: `my_model`
+Automatically transitions from **Staging → Production** after evaluation.
+
+
+
